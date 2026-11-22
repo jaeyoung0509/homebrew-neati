@@ -7,6 +7,10 @@ storage cleaner for Apple Silicon Macs.
 brew install --cask jaeyoung0509/neati/neati
 ```
 
+Homebrew asks before loading casks from a third-party tap. If it refuses with
+"untrusted tap", review [`Casks/neati.rb`](Casks/neati.rb) and run
+`brew trust jaeyoung0509/neati`, then install again.
+
 neati is a public beta and is not notarized with an Apple Developer ID. macOS
 blocks the first launch: open the app once, then choose **Open Anyway** in
 System Settings → Privacy & Security. Removing the quarantine attribute by hand
