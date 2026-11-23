@@ -21,6 +21,17 @@ The cask installs the DMG published on the matching
 carries SHA256 checksums and a GitHub build provenance attestation. After
 installation the app can update itself from Settings → Updates.
 
+From 0.3.134 the cask also links the `neati` command (the app's own binary):
+
+```bash
+neati status        # free space, memory, last cleanup
+neati clean         # preview what one-button Clean removes
+neati clean --yes   # permanently remove that set
+neati skill install # agent skill for Claude Code (--target codex for Codex)
+```
+
+Open the app once first so macOS has approved it before the command runs.
+
 ```bash
 brew uninstall --cask neati
 ```

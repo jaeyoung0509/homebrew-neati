@@ -1,6 +1,6 @@
 cask "neati" do
-  version "0.3.133"
-  sha256 "7512e52e46db8164de2a151e055944eb20fff5fc4d8bdcdc15d0bd533c1bf72c"
+  version "0.3.134"
+  sha256 "f3a538e6a974b49bb6d5f6c72aecf584e11977455baa1ea7e4140c534aa6826a"
 
   url "https://github.com/jaeyoung0509/neati/releases/download/v#{version}/neati-macos-arm64.dmg"
   name "neati"
@@ -12,6 +12,7 @@ cask "neati" do
   depends_on :macos
 
   app "neati.app"
+  binary "#{appdir}/neati.app/Contents/MacOS/Neati", target: "neati"
 
   uninstall launchctl: "com.neati.desktop.login",
             quit:      "com.neati.desktop"
@@ -32,6 +33,10 @@ cask "neati" do
 
       1. Open neati once and dismiss the warning.
       2. Go to System Settings > Privacy & Security and choose "Open Anyway".
+
+    Open the app once before running the `neati` command, so macOS has
+    already approved it. The command is the app itself (`neati help`).
+    To let Claude Code or Codex use it safely: `neati skill install`.
 
     Verify the download first if you prefer:
       gh attestation verify "$(brew --cache)"/downloads/*neati-macos-arm64.dmg --repo jaeyoung0509/neati
