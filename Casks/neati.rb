@@ -1,6 +1,6 @@
 cask "neati" do
-  version "0.3.142"
-  sha256 "8660ddeb395b3e28e193c63c5d27b5c811a309f54f6943fc2ab8755f980906d5"
+  version "0.3.145"
+  sha256 "309adaba34844c817c58fcd054a7436412e0c597d5916eeb182aa23074b5657b"
 
   url "https://github.com/jaeyoung0509/neati/releases/download/v#{version}/neati-macos-arm64.dmg"
   name "neati"
